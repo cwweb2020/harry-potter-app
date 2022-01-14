@@ -124,7 +124,7 @@
 }
 
 .desc-total .desc-wrapper {
-  width: 80%;
+  width: 75%;
   margin: auto;
   display: -ms-grid;
   display: grid;
@@ -138,11 +138,98 @@
 }
 
 .desc-total .desc-wrapper .desc-info-container {
-  padding: 25px 35px;
+  padding: 70px 35px 0 25px;
+  position: relative;
 }
 
 .desc-total .desc-wrapper .desc-info-container p {
   margin: 0%;
   font-size: 20px;
+}
+
+.desc-total .desc-wrapper .desc-info-container span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background: #d3d3d375;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.desc-total .desc-wrapper .desc-info-container span svg {
+  width: 36px;
+  height: 36px;
+}
+
+.card-img, .card-img-top {
+  width: 287px;
+  height: 412px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.fav-total {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #d3d3d317;
+}
+
+.fav-total h1 {
+  padding: 70px 0;
+}
+
+.fav-total .container .fav-wrapper .fav-card-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 101px 1fr;
+      grid-template-columns: 101px 1fr;
+  background-color: white;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.fav-total .container .fav-wrapper .fav-card-container .fav-pic {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.fav-total .container .fav-wrapper .fav-card-container .fav-pic img {
+  width: 100%;
+}
+
+.fav-total .container .fav-wrapper .fav-card-container .fav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.fav-total .container .fav-wrapper .fav-card-container .fav-content h3 {
+  font-size: 27px;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+}
+
+.svg-active {
+  color: red;
 }
 /*# sourceMappingURL=style.css.map */

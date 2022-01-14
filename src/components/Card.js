@@ -22,6 +22,7 @@ const Card = () => {
               <button className="btn btn-primary w-100">More info</button>
             </Link>
           </div>
+          
         </div>
       ))}
     </>

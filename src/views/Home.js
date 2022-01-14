@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollToTop from "react-scroll-to-top";
 import Card from "../components/Card";
 import SearchBar from "../components/SearchBar";
 
@@ -11,6 +12,7 @@ const Home = () => {
         <div className="home-wrapper">
           <Card />
         </div>
+        <ScrollToTop smooth />
       </section>
     </>
   );

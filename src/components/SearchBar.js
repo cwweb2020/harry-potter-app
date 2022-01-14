@@ -1,6 +1,17 @@
 import React from "react";
+import { CharConsumer } from "../context";
 
 const SearchBar = () => {
+   const [search, setSearch] = React.useState("");
+   const { filterCharacters } =  CharConsumer();
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  //  console.log(search);
+    filterCharacters(search);
+  } 
+     
+
   return (
     <>
       <div className="search-bar">
@@ -10,6 +21,7 @@ const SearchBar = () => {
           type="text"
           placeholder="Search for a character"
           className="form-control"
+          onChange={handleChange}
         />
 
       </div>
