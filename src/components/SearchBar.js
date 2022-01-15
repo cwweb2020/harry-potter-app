@@ -2,13 +2,19 @@ import React from "react";
 import { CharConsumer } from "../context";
 
 const SearchBar = () => {
-   const [search, setSearch] = React.useState("");
-   const { filterCharacters } =  CharConsumer();
+  // codigo viejo 
+  // el state search debe ser global no local 
+  //  const [search, setSearch] = React.useState("");
+  // no necesitas una funcion de filtro !
+  //  const { filterCharacters } =  CharConsumer();
+    const { setSearch } = CharConsumer();
+
 
   const handleChange = (e) => {
     setSearch(e.target.value);
   //  console.log(search);
-    filterCharacters(search);
+    // esta funcion no va mas !
+    //filterCharacters(search);
   } 
      
 

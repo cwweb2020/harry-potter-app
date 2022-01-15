@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { CharConsumer } from '../context'
 
 const Favourites = () => {
-   const {favourite} = CharConsumer()
+   const {favourite,removeFromFavourites} = CharConsumer()
    console.log("desde favourites " + favourite);
 
 
@@ -20,7 +20,7 @@ const Favourites = () => {
                             </div>
                             <div className="fav-content">
                                 <h3>{item.name}</h3>
-                                <button className='btn btn-danger'>Remove</button>
+                                <button onClick={() => removeFromFavourites(item.id)} className='btn btn-danger'>Remove</button>
                             </div>
                         </div>
                         ))
