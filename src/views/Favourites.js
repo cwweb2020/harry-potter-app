@@ -1,36 +1,36 @@
-import React from 'react'
-import { CharConsumer } from '../context'
+import React from "react";
+import { CharConsumer } from "../context";
 
 const Favourites = () => {
-   const {favourite,removeFromFavourites} = CharConsumer()
-   console.log("desde favourites " + favourite);
+  const { favourite, removeFromFavourites } = CharConsumer();
+  console.log("desde favourites " + favourite);
 
-
-    return (
-        <>
-            <section className='fav-total'>
-            <h1 className='text-center fs-3'>Favourites</h1>
-                <div className="container">
-                    <div className="fav-wrapper">
-                    {
-                        favourite.length > 0 && favourite.map((item, index) => (
-                            <div className="fav-card-container mb-4" key={index}>
-                            <div className="fav-pic">
-                                <img src={item.image} alt={item.name} />
-                            </div>
-                            <div className="fav-content">
-                                <h3>{item.name}</h3>
-                                <button onClick={() => removeFromFavourites(item.id)} className='btn btn-danger'>Remove</button>
-                            </div>
-                        </div>
-                        ))
-                    }
-
-                    </div>
+  return (
+    <>
+      <section className="fav-section">
+        <h1 className="text-center fav-title">Favourites</h1>
+        <div className="fav-card-wrapper">
+          {favourite.length > 0 &&
+            favourite.map((item, index) => (
+              <div className="fav-card" key={index}>
+                <div className="fav-pic">
+                  <img src={item.image} alt={item.name} />
                 </div>
-            </section>
-        </>
-    )
-}
+                <div className="fav-content">
+                  <h3>{item.name} - {item.house}</h3>
+                  <button
+                    onClick={() => removeFromFavourites(item.id)}
+                    className="btn btn-danger"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            ))}
+        </div>
+      </section>
+    </>
+  );
+};
 
-export default Favourites
+export default Favourites;

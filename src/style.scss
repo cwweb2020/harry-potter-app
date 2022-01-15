@@ -150,49 +150,54 @@
 }
 
 // tarjeta de favoritos
-.fav-total { 
+.fav-section {
     width: 100%;
-    min-height: 100vh;
+    min-height: 100vh; 
     background-color: #d3d3d317;
+    padding-bottom: 80px;
 
-	h1 { 
-
-        padding: 70px 0;
-
+	.fav-title { 
+       font-family: 'Times New Roman', Times, serif;
+       font-size: 40px;
+       padding-top: 80px;
 	}
 
-	.container { 
+	.fav-card-wrapper { 
+        width: 60%;
+        padding-left: 10%;
+        padding-top: 6rem;
 
-		.fav-wrapper { 
+		.fav-card { 
+            display: grid;
+            grid-template-columns: 20% 1fr;
+            width: 395px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            background-color: white;
+            margin-bottom: 20px;
 
-			.fav-card-container { 
-                display: grid;
-                grid-template-columns: 101px 1fr;
-                background-color: white;
-                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+			.fav-pic { 
 
-				.fav-pic { 
-                    border-radius: 50%;
-                    overflow: hidden;
+				img { 
+                    width: 100%;
 
-					img { 
-                        width: 100%;
-					}
+				}
+			}
+
+			.fav-content { 
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding: 20px 30px;
+
+				h3 { 
+                    font-size: 20px;
+                    font-family: 'Times New Roman', Times, serif;
+
 				}
 
-				.fav-content { 
-                    display: flex;
-                    align-items: center;
-                    padding: 30px;
-                    justify-content: space-between;
-
-					h3 { 
-                       font-size: 27px;
-                       font-weight: 400;
-                       text-transform: capitalize;
-                       font-family: 'Times New Roman', Times, serif;
-                       margin: 0;
-					}
+				.btn { 
+                    align-self: flex-start;
+                    font-size: 15px;
 				}
 			}
 		}
